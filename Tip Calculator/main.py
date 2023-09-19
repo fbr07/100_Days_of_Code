@@ -16,6 +16,7 @@ floatpercentagetip = float(percentage_tip)
 decimaltip = floatpercentagetip / 100
 ppl_split_bill = input("How many people to split the bill? ")
 floatpplsplit = float(ppl_split_bill)
-equation = (inttotalbill / floatpplsplit) * decimaltip
-twodecimalplaces = round(equation, 2)
+billwithtip = (inttotalbill * decimaltip) + inttotalbill
+billtotal = billwithtip / floatpplsplit
+twodecimalplaces = round(billtotal, 2)
 print(f"Each person should pay: ${twodecimalplaces}")
